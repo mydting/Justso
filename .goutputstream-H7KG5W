@@ -1,0 +1,8 @@
+require 'net/ftp'
+require 'uri'
+
+uri = URI.parse('ftp://ftp.hrbeu.edu.cn')
+
+Net::FTP.open(uri.host) do |ftp|
+  ftp.login
+  puts "
